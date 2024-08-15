@@ -1,45 +1,14 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import about from "../images/about.jpg";
 import team1 from "../images/team1.png";
 import team2 from "../images/team2.png";
 import team3 from "../images/team3.png";
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
-<MainLayout title="Articles, Stories & Tutorial for Tech People.">
-  <!-- Article Card  -->
-  <div class="max-w-md mx-auto mt-10">
-    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-      <a href="#">
-        <img
-          alt="Article Image"
-          class="w-full h-48 object-cover hover:opacity-75 transition duration-300 ease-in-out"
-        />
-      </a>
-      <div class="p-6">
-        <h2 class="text-2xl font-semibold mb-2"></h2>
-        <p class="text-gray-600 text-sm mb-4"></p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Pagination   -->
-  <div class="flex justify-between mt-10">
-    <a
-      href="#"
-      class="inline-block bg-indigo-100 px-3 py-2 hover:bg-indigo-600 hover:text-white rounded-lg"
-    >
-      Previous
-    </a>
-    <a
-      href="#"
-      class="inline-block bg-indigo-100 px-3 py-2 hover:bg-indigo-600 hover:text-white rounded-lg"
-    >
-      Next
-    </a>
-  </div>
-</MainLayout>
+<Navbar />
 
 <section class="container mx-auto max-w-screen-xl mt-10 px-8">
   <h1 class="text-4xl font-bold mb-5">About TechPeople</h1>
@@ -98,44 +67,4 @@ import team3 from "../images/team3.png";
   </div>
 </section>
 
-<footer class="bg-indigo-900 text-white">
-  <div class="container mx-auto mt-10 max-w-screen-xl px-8">
-    <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
-      <div class="mt-10">
-        <h3 class="text-xl font-semibold mb-4">About</h3>
-        <p class="text-white text-sm">
-          TechPeople is a blog for tech enthusiasts. We publish articles,
-          stories and tutorials about the latest technology trends and
-          advancements.
-        </p>
-      </div>
-      <div class="mt-10">
-        <h3 class="text-xl font-semibold mb-4">Categories</h3>
-        <ul class="text-white text-sm">
-          <!-- {uniqueTags.map(tag => (
-            <li class="mb-2">
-              <a href={'/articles/tag/' + tag}>#{capitalize(tag)}</a>  
-            </li>
-          ))} -->
-        </ul>
-      </div>
-      <div class="mt-10">
-        <h3 class="text-xl font-semibold mb-4">Contact</h3>
-        <ul class="text-white text-sm">
-          <li class="mb-2">
-            <a href="#">Email</a>
-          </li>
-          <li class="mb-2">
-            <a href="#">Twitter</a>
-          </li>
-          <li class="mb-2">
-            <a href="#">Facebook</a>
-          </li>
-          <li class="mb-2">
-            <a href="#">Instagram</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
+<Footer />
